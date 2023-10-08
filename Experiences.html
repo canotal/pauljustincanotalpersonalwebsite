@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0c1022;
+            color: #fff;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            pointer-events: none;
+            opacity: 0;
+            animation: slideTop 1s ease forwards;
+        }
+
+        .navbar a {
+            display: inline-block;
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            opacity: 0;
+            animation: slideTop 0.5s ease forwards;
+            animation-delay: calc(0.2s * var(--i));
+        }
+
+        .navbar a.Experiences,
+        .navbar a:hover {
+            background: linear-gradient(45deg, #f06, #3cf);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        /* Animation */
+
+        @keyframes slideTop {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideRight {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes floatImage {
+            0% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-24px)
+            }
+
+            100% {
+                transform: translateY(0)
+            }
+        }
+
+        .experiences-section {
+            margin-top: 200px;
+            text-align: center;
+            animation: slideTop 1s ease forwards;
+        }
+
+        .experience-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .experience-card h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .experience-card p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">PersonalWeb.</a>
+        <nav class="navbar">
+            <a href="Home.html" style="--i:1;" class="Home">Home</a>
+            <a href="Achievements.html" style="--i:2;" class="Achievements">Achievements</a>
+            <a href="Experiences.html" style="--i:3;" class="Experiences">Experiences</a>
+            <a href="FamilyTree.html" style="--i:4;" class="FamilyTree">Family Tree</a>
+            <a href="Contact.html" style="--i:5;" class="Contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="experiences-section">
+        <div class="experience-card">
+            <h2>Learning HTML and CSS</h2>
+            <p>Duration: 1 month</p>
+            <p>Description: I started learning HTML and CSS, and I've made progress in creating basic web pages and styling them. I'm excited to continue my journey in web development.<br>
+            I might not be the brightest of my classmates in terms of programming, but i will try to do my best everytime</p>
+        </div>
+
+        <!-- Add more experiences here -->
+
+    </div>
+
+</body>
+
+</html>
